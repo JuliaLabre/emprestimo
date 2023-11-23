@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 abstract class SolicitacaoEmprestimo {
     constructor(
         protected id: number,
@@ -92,6 +94,16 @@ if (estudantil != undefined) {
         console.log(`${nome} você não tem os requesitos para um empréstimo no momento`)
     }
 }
+
+// static listar()  {
+//     const content = fs.readFileSync('emprestimo.json', 'utf-8')
+//     const emprestimos = JSON.parse(content)
+//     return emprestimos
+// }
+// fs.writeFileSync('emprestimo.json', JSON.stringify(estudantil))
+// fs.writeFileSync('emprestimo.json', JSON.stringify(automovel))
+// fs.writeFileSync('emprestimo.json', JSON.stringify(pessoal))
+
 /*a ideia é , receber o empréstimo, validar idade e se as parcelas e valor da parcela está de acordo com o total do emprestimo , estando correto perguntar o tipo de emprestimo que a pessoa quer fazer e validar de acordo e lançar em um json, daí puxar a lista de aprovados e reprovados identificando o nome e o tipo de empréstimo
 Por falta de tempo e segurança, só consegui entregar isso mesmo.
 Me senti mais segura fazendo o UML no drawio do que codificando de fato devido aos processos das aulas
